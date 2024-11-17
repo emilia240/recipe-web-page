@@ -65,8 +65,8 @@ body {
 }
 
 .container {
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgb(35, 31, 46) 100%); 
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(57, 57, 57) 100%); 
     width: var(--width-full);
     height: auto;
 
@@ -122,7 +122,7 @@ body {
 .hero-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto auto auto; /*WHY*/
+    grid-template-rows: auto auto auto; 
     gap: var(--grid-gap);
     width: var(--width-12col);
     margin: 0 auto;
@@ -195,13 +195,14 @@ body {
     box-sizing: border-box;
     width: var(--width-12col);
     margin: 0 auto;
+    padding-top: 28px;
 }
 
 .todays_recipes_content_block_image img {
     height: 200px;
     width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     border-radius: 5px 5px 0 0;
 }
 
@@ -214,10 +215,14 @@ body {
     display: flex;
     align-items: center;
     justify-self: flex-start;
-    margin: 70px auto;
+    margin: 70px auto 0 auto;
     width: var(--width-12col);
     font-size: 50px;
     text-shadow: 1px 1px 2px var(--background-color-dark-bg);
+}
+
+.todays_recipes_headline h3 {
+    padding-bottom: 9px;
 }
 
 .todays_recipes_content_block {
@@ -346,10 +351,11 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     display: flex;
     align-items: center;
     justify-self: flex-start;
-    margin: 70px auto;
+    margin: 70px auto 0 auto;
     width: var(--width-12col);
     font-size: 50px;
     text-shadow: 1px 1px 3px var(--background-color-dark-bg);
+    padding-bottom: 9px;
 }
 
 .categories_content {
@@ -360,7 +366,7 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     flex-direction:row;
     background-color:var(--background-color-light);
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 28px auto 0 auto;
     padding: 5px;
     gap: var(--grid-gap);
 }
@@ -369,7 +375,7 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
 }
 
 .categories_content_block_icon {
@@ -443,8 +449,6 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     font-size:16px;
     font-family:'Roboto regular', sans-serif ;
 }
-/*sth seems off with the fonts; SOLVE that*/
-
 
 
 .content_area {
@@ -465,10 +469,11 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     display: flex;
     align-items: center;
     justify-self: flex-start;
-    margin: 70px auto;
+    margin: 70px auto 0 auto;
     width: var(--width-12col);
     font-size: 50px;
     text-shadow: 1px 1px 3px var(--background-color-dark-bg);
+    padding-bottom: 9px;
 }
 
 .content_area_block {
@@ -478,7 +483,7 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     gap: 0;
     box-sizing: border-box;
     width: var(--width-12col);
-    margin: 0 auto 250px auto;
+    margin: 28px auto 250px auto;
 }
 
 .content_area_box {
@@ -494,7 +499,7 @@ p[data-category="meats"], h4[data-category="meats"], i[data-category="meats"] {
     background-image: url(https://picsum.photos/560/380);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; /*twice? I think so?*/
+    background-position: center center;
 }
 
 .content_area_box_text h5 {
@@ -767,7 +772,7 @@ footer {
     grid-column: 7 / span 6;
     height: fit-content;
     display: flex;
-    justify-content: center; /*can I change this pls to flex end and move the img down a bit?*/
+    justify-content: center; /*can I change this pls to flex end and how do I move the img down a bit?*/
     align-items: center;
   }
   
@@ -775,7 +780,7 @@ footer {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center; /*WHY is it twice?*/
+    background-position: center center; 
   } 
   
 .recipe_details_right_image img {
@@ -803,14 +808,18 @@ footer {
     text-transform: uppercase;
     font-weight:700;
     margin: 77px auto 0 auto;
+    /* margin: 77px auto 28px auto; why doesn't this work?  */
     width: var(--width-12col);
     font-size: 50px;
     text-shadow: 1px 1px 3px var(--background-color-dark-bg);
+    /* padding-bottom: 9px; why doesn't this work? */
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
 }
+
+/* HEADLINE PROBLEM */
 
 .instructions-headline-left {
     display: grid;
@@ -873,7 +882,7 @@ footer {
     list-style-type: none;
 }
 
-/*how do I align this to the text???????????????*/
+/*how do I align this to the text??????????????? PROBLEM*/
 .marker {
     position: absolute;
     transform: rotate(-90deg);
@@ -882,5 +891,362 @@ footer {
     font-family:'Roboto medium', sans-serif ;
     font-size: 13px;
     transform-origin: left bottom;
+}
+
+
+
+/* third page */
+
+.dessert_categories_block {
+    height: fit-content;
+    width: var(--width-full);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+}
+
+.dessert_categories_headline {
+    color: var(--color-white);
+    height: 60px;
+    border-bottom: 1px solid var(--color-white);
+    text-transform: uppercase;
+    font-weight:700;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    margin: 70px auto 0 auto;
+    width: var(--width-12col);
+    font-size: 50px;
+    text-shadow: 1px 1px 2px var(--background-color-dark-bg);
+    padding-bottom: 9px;
+}
+
+.dessert_categories_content {
+    width: var(--width-12col);
+    height:140px;
+    justify-content:space-around;
+    align-items: center;
+    display:flex;
+    flex-direction:row;
+    background-color:var(--background-color-light);
+    border-radius: 5px;
+    margin: 28px auto 0 auto;
+    padding: 5px;
+    gap: var(--grid-gap);
+}
+
+.dessert_categories_content_block {
+    height: 90px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--category-dessert);
+    border-radius: 5px;
+}
+
+.dessert_categories_content_block p {
+    color: var(--background-color-light);
+    font-family:'Roboto regular', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+.dessert_popular_recipes {
+    height: fit-content;
+    width: var(--width-full);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto; 
+    gap: var(--grid-gap);
+}
+.dessert_popular_recipes_headline {
+    color: var(--color-white);
+    height: 60px;
+    border-bottom: 1px solid var(--color-white);
+    text-transform: uppercase;
+    font-weight:700;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    margin: 70px auto 0 auto;
+    width: var(--width-12col);
+    font-size: 50px;
+    text-shadow: 1px 1px 3px var(--background-color-dark-bg);
+    padding-bottom: 9px;
+}
+
+.dessert_popular_recipes_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    width: var(--width-12col);
+    margin: 0 auto;
+    padding-top: 28px;
+}
+ .dessert_popular_recipes_content_block {
+    height: 359px;
+    width: var(--width-full);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all 0.3s ease;
+ }
+ .dessert_popular_recipes_content_block img {
+    background-size: cover;
+    background-position: center center;
+    filter: blur(1px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dessert_popular_recipes_content_block:hover img {
+    opacity: 0.3;
+    transform: scale(1.1);
+}
+
+.dessert_popular_recipes_content_block::before {
+    background-color: rgb(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3 ease;
+    position: absolute;
+    z-index: 1;
+}
+
+.dessert_popular_recipes_content_block:hover::before {
+    opacity: 1;
+}
+
+.dessert_popular_recipes_content_block_text {
+    position: absolute;
+    background-color: var(--background-color-dark-bg);
+    display: flex;
+    flex-direction: column;
+    top: 23px;
+    left: auto;
+    right: auto;
+    width: 210px;
+    height: 74px;
+    padding: var(--padding-default);
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+    z-index: 2;
+}
+
+.dessert_popular_recipes_content_block_text h5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    border-left:1px solid var(--category-dessert);
+    text-transform: uppercase;
+    color: var(--category-dessert);
+    font-size: 16px;
+    font-family:'Roboto regular', sans-serif;
+}
+.dessert_popular_recipes_content_block_text p {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Roboto', bold;
+    color: var(--color-light);
+    margin-top: 5px;
+}
+
+.play_icon {
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+.fa-play {
+    color: var(--color-light);
+    font-size: 100px;
+    text-shadow: 1px 1px 1px var(--background-color-navigation);
+}
+
+
+.newest_recipes {
+    height: fit-content;
+    width: var(--width-full);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+}
+
+.newest_recipes_headline {
+    color: var(--color-white);
+    height: 60px;
+    border-bottom: 1px solid var(--color-white);
+    text-transform: uppercase;
+    font-weight:700;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    margin: 70px auto 0 auto;
+    width: var(--width-12col);
+    font-size: 50px;
+    text-shadow: 1px 1px 3px var(--background-color-dark-bg);
+    padding-bottom: 9px;
+}
+
+.newest_recipes_block {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:repeat(3, 380px);
+    gap: 0;
+    box-sizing: border-box;
+    width: var(--width-12col);
+    margin: 28px auto 0px auto;
+}
+
+.newest_recipes_box {
+    background-color: var(--color-light);
+    color: var(--color_dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:79px 186px 89px 93px;
+}
+
+.newest_recipes_box h5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 10px;
+    border-left:2px solid var(--category-dessert);
+    margin-bottom: 10px;
+}
+
+.newest_recipes_box h3 {
+    font-size: 22px;
+    font-family: 'Roboto', bold;
+    text-transform: uppercase;
+    color: var(--category-dessert);
+    margin-bottom: 14px;
+}
+
+.newest_recipes_box p {
+    font-size:16px;
+    font-family: 'Roboto regular', sans-serif ;
+}
+
+.newest_recipes_box_time {
+    display: flex;
+    padding: 10px 0; 
+}
+
+.newest_recipes_box_time i{
+    color: var(--category-dessert);
+    padding: 0 10px 0 0; 
+}
+
+.newest_recipes_button {
+    background-color: var(--color_dark);
+    border: 1px solid var(--background-color-light);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 180px;
+}
+.newest_recipes_button a {
+    color: var(--background-color-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.newest_recipes_box_img {
+    display: flex;
+    max-width: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+}
+/* WEIRD PROBLEM */
+
+.newsletter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 295px;
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    width: var(--width-12col);
+    margin: 172px auto 118px auto;
+    font-size:22px;
+    font-family:'Roboto regular', sans-serif;
+    color: var(--background-color-dark-bg);
+}
+
+.newsletter_left_block {
+    background-color: var(--color-light);
+    padding: 81px 92px;
+}
+
+.newsletter_right_block {
+    background-color: var(--color-light);
+    padding: 70px 92px;
+}
+
+.newsletter_left_block_box {
+    margin-top: 41px;
+    display: flex;
+    align-items: center;
+}
+
+.email-input {
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow:1px 1px 3px var(--background-color-dark-bg) ;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family:'Roboto regular', sans-serif;
+    color: var(--background-color-dark-bg);
+    margin-right: 20px;
+}
+
+.email-input::placeholder {
+    color: var(--background-color-dark-bg);
+}
+
+.newsletter_sign_up {
+    background-color: var(--color_dark);
+    border: 1px solid var(--background-color-light);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.newsletter_sign_up a {
+    color: var(--background-color-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
