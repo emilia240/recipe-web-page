@@ -793,7 +793,7 @@ footer {
     grid-column: 7 / span 6;
     height: fit-content;
     display: flex;
-    justify-content: center; /*can I change this pls to flex end and how do I move the img down a bit?*/
+    justify-content: center; 
     align-items: center;
   }
   
@@ -1149,7 +1149,24 @@ footer {
     justify-content: space-between;
     padding:79px 186px 89px 93px;
 }
-
+#newest_recipe_img_1 {
+    background-image: url(https://images.unsplash.com/photo-1713274787530-5955bded42a4?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#newest_recipe_img_2 {
+    background-image: url(https://images.unsplash.com/photo-1542761887-0457dc8f5ca1?q=80&w=2906&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+#newest_recipe_img_3{
+    background-image: url(https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2FPhoto%2FRecipes%2F2023-09-pumpkin-cheesecake-mousse%2Fpumpkin-cheesecake-mousse-1090);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 .newest_recipes_box h5 {
     display: flex;
     flex-direction: column;
@@ -1300,8 +1317,14 @@ footer {
     .categories-icon {
         font-size: 25px;
     }
+    .categories_content_block_text h4 {
+        font-size: 14px;
+    }
     .todays_recipes_content_block_text h4{
         font-size: 16px;
+    }
+    .todays_recipes_content_block_text p {
+        font-size: 14px;
     }
     .content_area_headline {
         font-size: 25px;
@@ -1315,6 +1338,96 @@ footer {
         flex-direction: column;
     }
     .content_area_box {
-        margin: 5px auto;
+        margin: 5px;
+        padding: 20px;
     }
+    .content_area_box_text h3 {
+        font-size: 16px;
+    }
+    .categories_content_block_text p {
+        font-size: 14px;
+    }
+
+
+    .recipe_details_right_image {
+        display: none;
+    }
+    .recipe-hero-text-medium {
+        font-size: 25px;
+    }
+    .recipe-hero-text-large {
+        font-size: 30px;
+    }
+    .recipe_details_ingredients h4 {
+        font-size: 20px;
+    }
+    .recipe_details_ingredient_block_checkboxes {
+        font-size: 14px;
+    }
+    .instructions-headline {
+        font-size: 25px;
+    }
+    .instructions-text {
+        font-size: 12px;
+    }
+
+
+    .dessert_categories_headline {
+        font-size: 25px;
+    }
+    .dessert_categories_content {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .dessert_categories_content_block {
+        height: auto;
+        width: auto;
+        font-size: 12px;
+        padding: 20px;
+    }
+    .dessert_popular_recipes_headline {
+        font-size: 25px;
+    }
+    .dessert_popular_recipes_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .play_icon {
+        bottom: 35%;
+    }
+    .newest_recipes_headline {
+        font-size: 25px;
+    }
+    .newest_recipes_block {
+        display: flex;
+        flex-direction: column;
+    }
+    .newest_recipes_box_img {
+        display: none;
+    }
+    .newest_recipes_box {
+        margin: 5px;
+        padding: 20px;
+    }
+    .newest_recipes_box h3 {
+        font-size: 16px;
+    }
+    .newest_recipes_box p {
+        font-size: 14px;
+    }
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+
+    .footer_container {
+        gap: 10px;
+    }
+    .footer-text {
+        font-size: 10px;
+    }
+
+
 }
